@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "5574b560-1c50-4274-bef4-d400d746305f",
+		"name": "xlsx to db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fileUpload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sheetNumber",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "rowNumber",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fileName",
+							"contentType": "File\n",
+							"type": "file",
+							"src": "/C:/Users/Gourab/Downloads/ExportExcel.xlsx"
+						},
+						{
+							"key": "keys",
+							"value": "name,city",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fileUpload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fileUpload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dynamicallyexcel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sheetNumber",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "rowStart",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"contentType": "File\n",
+							"type": "file",
+							"src": "/C:/Users/Gourab/Downloads/ExportExcel.xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/dynamicallyexcel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dynamicallyexcel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
